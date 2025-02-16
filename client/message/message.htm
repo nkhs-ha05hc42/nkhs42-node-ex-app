@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="message.mjs"></script>
+    <link rel="stylesheet" type="text/css" href="message.css" />
+  </head>
+  <body>
+    <form id="message-form">
+      <select id="user-select" name="message_user_id"></select>
+      <textarea
+        placeholder="メッセージを入力"
+        rows="3"
+        name="message"
+      ></textarea>
+      <button id="submit-button" type="button">メッセージをポスト</button>
+    </form>
+    <div id="messages"></div>
+    <div id="loading-screen" class="display-none">
+      <div class="loader">Loading...</div>
+    </div>
+  </body>
+</html>

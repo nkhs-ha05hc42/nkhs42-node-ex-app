@@ -1,0 +1,35 @@
+{
+  "name": "nkhs-node-ex-base",
+  "version": "1.0.0",
+  "main": "app.mjs",
+  "type": "module",
+  "author": "nkhs42",
+  "license": "MIT",
+  "engines": {
+    "node": "22.9.0",
+    "npm": "10.8.3"
+  },
+  "scripts": {
+    "dev": "node --watch --env-file=.env server/app.mjs",
+    "start": "node server/app.mjs",
+    "lint": "eslint && prettier --check --ignore-unknown .",
+    "lint:fix": "eslint --fix && prettier --write --ignore-unknown .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown",
+    "**/*.{js,css,htm}": "eslint --fix"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.11.1",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3"
+  },
+  "packageManager": "npm@10.8.3"
+}
