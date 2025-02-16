@@ -12,4 +12,4 @@ RUN apt-get update && apt-get install -y git vim-tiny
 WORKDIR /app
 COPY . .
 
-RUN yarn install
+RUN npm install
